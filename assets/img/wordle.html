@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Emma Webb - Wordle</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        /* Add some basic styles for the Wordle game */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .game-container {
+            text-align: center;
+            width: 300px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+
+        .cell {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #ccc;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        .cell.correct {
+            background-color: green;
+            color: white;
+        }
+
+        .cell.present {
+            background-color: yellow;
+            color: white;
+        }
+
+        .cell.absent {
+            background-color: gray;
+            color: white;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .input-row {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .input-box {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            font-size: 1.5rem;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            background-color: #660000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #550000;
+        }
+
+        h2 {
+            color: #660000;
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand"><a href="#page-top">Emma Webb</a></li>
+            <li class="sidebar-nav-item"><a href="index.html">Home</a></li>
+            <li class="sidebar-nav-item"><a href="resume.html">Resume</a></li>
+            <li class="sidebar-nav-item"><a href="tableau.html">Tableau</a></li>
+            <li class="sidebar-nav-item"><a href="wordle.html">Wordle</a></li>
+            <li class="sidebar-nav-item"><a href="#fashion">Fashion</a></li>
+        </ul>
+    </nav>
+
+    <!-- Wordle Section -->
+    <section class="content-section" id="wordle">
+        <div class="container px-4 px-lg-5 text-center game-container">
+            <h2>Emma Webb's Wordle Game</h2>
+            <p>Check out my Wordle game project and try solving the puzzle!</p>
+
+            <!-- Grid for displaying guesses -->
+            <div id="grid" class="grid"></div>
+
+            <!-- Input row for user guesses -->
+            <div class="input-row">
+                <input type="text" id="guess1" class="input-box" maxlength="1">
+                <input type="text" id="guess2" class="input-box" maxlength="1">
+                <input type="text" id="guess3" class="input-box" maxlength="1">
+                <input type="text" id="guess4" class="input-box" maxlength="1">
+                <input type="text" id="guess5" class="input-box" maxlength="1">
+            </div>
+
+            <!-- Check Guess Button -->
+            <div class="button-container">
+                <button class="btn" onclick="checkGuess()">Check Guess</button>
+            </div>
+
+            <a class="btn btn-primary btn-xl" href="index.html">Back to Home</a>
+        </div>
+    </section>
+
+    <script>
+        // Wordle game logic
+
+        const secretWord = "apple"; // Secret word for the game
+        let currentGuess = 0;
+
+        function checkGuess() {
+            let guess = '';
+            for (let i = 1; i <= 5; i++) {
+                guess += document.getElementById(`guess${i}`).value.toLowerCase();
+            }
+
+            // Check if the guess is valid (5 letters)
+            if (guess.length !== 5 || !/^[a-zA-Z]+$/.test(guess)) {
+                alert("Please enter a 5-letter word.");
+                return;
+            }
+
+            // Display the guess in the grid
+            const grid = document.getElementById("grid");
+            const guessRow = document.createElement("div");
+            guessRow.classList.add("grid-row");
+            for (let i = 0; i < 5; i++) {
+                const cell = document.createElement("div");
+                cell.classList.add("cell");
+                const letter = guess.charAt(i);
+                cell.textContent = letter;
+
+                if (letter === secretWord.charAt(i)) {
+                    cell.classList.add("correct");
+                } else if (secretWord.includes(letter)) {
+                    cell.classList.add("present");
+                } else {
+                    cell.classList.add("absent");
+                }
+                guessRow.appendChild(cell);
+            }
+            grid.appendChild(guessRow);
+
+            // Reset input fields
+            for (let i = 1; i <= 5; i++) {
+                document.getElementById(`guess${i}`).value = '';
+            }
+
+            // Check for win
+            if (guess === secretWord) {
+                alert("Congratulations! You've guessed the word!");
+            } else if (currentGuess >= 5) {
+                alert(`Game over! The correct word was ${secretWord}.`);
+            }
+
+            currentGuess++;
+        }
+    </script>
+
+</body>
+</html>

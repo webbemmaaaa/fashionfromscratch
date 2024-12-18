@@ -1,0 +1,150 @@
+/* Global Body Styles */
+body {
+    font-family: 'Arial', sans-serif; /* Font family for the page */
+    background-color: #f0f8ff; /* Light background color */
+    color: #333; /* Dark text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section Styling */
+.header {
+    background-color: #ffcccb; /* Light red background for the header */
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Content Section Styling */
+.content {
+    background-color: #ffffff; /* White background for content */
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Section Styling */
+.footer {
+    background-color: #660000; /* Red background for footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Anchor Link Styling */
+#anchor-link {
+    color: #007bff; /* Blue color for anchor links */
+    text-decoration: none;
+}
+
+#anchor-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Title Section */
+.header h1 {
+    font-family: 'Pacifico', cursive; /* Cursive font for the title */
+    color: #660000;                  /* Dark red color */
+    font-size: 6rem;                 /* Increased font size for bigger title */
+    margin-bottom: 10px;             /* Add space below the title */
+}
+
+/* Intro Text (below the title) */
+.intro-text {
+    font-family: 'Arial', sans-serif;
+    color: #660000;                  /* Dark red color */
+    font-size: 1.5rem;               /* Slightly larger font */
+    font-weight: bold;               /* Bold text */
+    text-align: center;              /* Center the intro text */
+    margin-bottom: 20px;             /* Space below the intro text */
+}
+
+/* Top Navigation Bar Styling */
+.top-nav {
+    text-align: center;             /* Center links */
+    background-color: #660000;      /* Red background for navigation */
+    padding: 10px;
+}
+
+.top-nav a {
+    color: white;                   /* White text */
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.top-nav a:hover {
+    text-decoration: underline;      /* Underline on hover */
+}
+
+/* Anchor Link Styling */
+.anchor-links {
+    text-align: center;             /* Center links */
+    margin-top: 20px;
+}
+
+.anchor-links a {
+    color: #660000;                 /* Dark red color for the links */
+    font-size: 1.1rem;
+    text-decoration: none;
+    margin: 10px 20px;
+}
+
+.anchor-links a:hover {
+    text-decoration: underline;      /* Underline on hover */
+}
+
+/* Footer Section */
+footer {
+    background-color: #660000;      /* Red background for footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Image Container (Centering Image) */
+.image-container {
+    display: flex;               /* Apply Flexbox to the container */
+    justify-content: center;     /* Center horizontally */
+    margin-top: 20px;            /* Space at the top */
+}
+
+/* Image Styling */
+.image-container img {
+    max-width: 100%;             /* Make sure the image is responsive */
+    height: auto;                /* Maintain aspect ratio */
+    object-fit: contain;         /* Ensure the image maintains aspect ratio without overflow */
+}
+
+/* Styling for the Back to Home button */
+.btn-home {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    color: white;
+    background-color: #660000; /* Red background */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.btn-home:hover {
+    background-color: #550000; /* Darker red on hover */
+}
+
+
+
+
+
+
+
+

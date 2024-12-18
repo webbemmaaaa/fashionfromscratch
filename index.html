@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Emma Webb</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Simple line icons-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        /* Ensure full height and zero margins for html and body */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Cream-colored top bar with red text */
+        .top-bar {
+            background-color: #f4f1e1; /* Cream color */
+            color: #660000; /* Red text */
+            padding: 10px 0;
+            text-align: center;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1.25rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        /* Make the top bar links inline and bold */
+        .top-bar a {
+            color: #660000; /* Red text */
+            text-decoration: none; /* No underline */
+            margin: 0 15px;
+            font-size: 1.2rem;
+            font-weight: bold; /* Make text bold */
+        }
+
+        /* Add pipe separator between links */
+        .top-bar a:not(:last-child)::after {
+            content: " |"; /* Add pipe separator */
+            margin-left: 15px;
+        }
+
+        /* Add padding-top to the body to avoid overlap with the red bar */
+        body {
+            padding-top: 50px; /* Adjust the value based on the height of the red bar */
+        }
+
+        /* Default styles for header (masthead) */
+        .masthead {
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Full viewport height */
+            background-size: cover;
+            background-position: center center;
+            display: flex;
+            justify-content: center; /* Centers content horizontally */
+            align-items: center; /* Centers content vertically */
+            text-align: center; /* Centers text inside the container */
+        }
+
+        /* Styling for the "Emma Webb" text */
+        .masthead h1 {
+            color: #f4f1e1; /* Cream color */
+            font-family: 'Dancing Script', cursive;
+            font-size: 12rem; /* Adjust size as needed */
+            font-weight: bold;
+            margin: 0; /* Remove any default margin */
+        }
+
+        /* Styling for the "Welcome to My Professional Portfolio" text */
+        .masthead h3 {
+            color: #f4f1e1; /* Cream color */
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        /* Styling for the About section */
+        #about h2 {
+            color: black;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: bold;
+            font-size: 3.5rem;
+            text-align: center; /* Center the heading */
+        }
+
+        #about .lead {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: bold;
+            color: #660000;
+            font-size: 1.25rem;
+            text-align: center; /* Center the paragraph */
+        }
+
+        /* Footer styles */
+        .footer {
+            background-image: url('assets/img/heygirl.jpg');
+            background-size: cover;
+            background-position: center center;
+            color: white;
+            padding: 60px 0;
+            background-repeat: no-repeat;
+        }
+
+        /* Social icon hover effects */
+        .footer .social-link {
+            background-color: #660000;
+            padding: 10px;
+            border-radius: 50%;
+            transition: background-color 0.3s, transform 0.3s ease;
+            color: white; /* Ensure the icons are white */
+        }
+
+        /* Increase icon size and hover effect */
+        .footer .social-link i {
+            font-size: 3rem; /* Set icon size */
+            color: white; /* Make sure the icon color is white */
+        }
+
+        .footer .social-link:hover {
+            background-color: #550000;
+            transform: scale(1.1); /* Slight scale effect on hover */
+        }
+
+        .footer .social-link:active {
+            transform: scale(1); /* Reset scale when clicked */
+        }
+
+        .footer .text-muted {
+            color: white !important;
+        }
+    </style>
+</head>
+<body id="page-top">
+    <!-- Cream-colored Top Bar (Fixed) with bold links and pipe separator -->
+    <div class="top-bar">
+        <a href="wordle.html">Wordle</a>
+        <a href="resume.html">Resume</a>
+        <a href="tableau.html">Tableau</a> <!-- Added the link to Tableau -->
+    </div>
+
+    <!-- Header-->
+    <header class="masthead d-flex align-items-center" style="background-image: url('assets/img/cracy.jpg');">
+        <div class="container px-4 px-lg-5 text-center">
+            <h1 class="mb-1">Emma Webb</h1>
+            <h3 class="mb-5">Welcome to My Professional Portfolio</h3>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="content-section" id="about">
+        <div class="container px-4 px-lg-5 text-center">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-10">
+                    <!-- Centered heading -->
+                    <h2>My Professional Journey</h2>
+                    <!-- Centered paragraph -->
+                    <p class="lead mb-5">
+                        Here you can learn more about my background, experience, and the projects I’ve worked on.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer text-center">
+        <div class="container px-4 px-lg-5">
+            <ul class="list-inline mb-5">
+                <!-- Facebook Icon -->
+                <li class="list-inline-item">
+                    <a class="social-link text-white mr-3" href="https://www.facebook.com/profile.php?id=100088822781849" target="_blank">
+                        <i class="icon-social-facebook"></i>
+                    </a>
+                </li>
+                <!-- LinkedIn Icon -->
+                <li class="list-inline-item">
+                    <a class="social-link text-white mr-3" href="https://www.linkedin.com/in/emma-webb-473518299" target="_blank">
+                        <i class="icon-social-linkedin"></i>
+                    </a>
+                </li>
+                <!-- YouTube Icon -->
+                <li class="list-inline-item">
+                    <a class="social-link text-white" href="https://www.youtube.com/@emmawebb_14" target="_blank">
+                        <i class="icon-social-youtube"></i>
+                    </a>
+                </li>
+            </ul>
+            <p class="text-muted small mb-0">Copyright &copy; Emma Webb 2024</p>
+        </div>
+    </footer>
+    
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

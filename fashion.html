@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Photography Hobby</title>
+    <link href="styles.css" rel="stylesheet"> <!-- Link to custom stylesheet -->
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Photography Hobby Page!</h1>
+        <nav>
+            <ul>
+                <li><a href="#gallery">Photo Gallery</a></li>
+                <li><a href="#video">My Favorite Photography Video</a></li>
+                <li><a href="#tableau">Interactive Graph</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="gallery" class="content-section">
+        <h2>Photography Gallery</h2>
+        <div class="gallery-container">
+            <img src="https://via.placeholder.com/600x400" alt="Landscape Photo" class="photo">
+            <img src="https://via.placeholder.com/600x400" alt="Portrait Photo" class="photo">
+            <img src="https://via.placeholder.com/600x400" alt="Street Photography" class="photo">
+        </div>
+    </section>
+
+    <section id="video" class="content-section">
+        <h2>My Favorite Photography Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DQxqN8Ljj_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+    <section id="tableau" class="content-section">
+        <h2>Interactive Tableau Graph</h2>
+        <!-- Embedded Tableau visualization (replace URL with your own) -->
+        <iframe src="https://public.tableau.com/views/SampleGraph/SampleGraph?:embed=y&:display_count=yes" width="800" height="600"></iframe>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Photography Hobby Page | <a href="https://example.com">Back to Professional Page</a></p>
+    </footer>
+</body>
+</html>
+CSS (styles.css):
+css
+Copy code
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* Custom background color */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    background-color: #444;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Section styles */
+.content-section {
+    margin-top: 30px;
+}
+
+h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    color: #660000;
+    margin-bottom: 15px;
+}
+
+/* Gallery styles */
+.gallery-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.photo {
+    width: 30%;
+    margin: 10px;
+    border: 5px solid #ccc;
+    border-radius: 8px;
+}
+
+.photo:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+
+/* Footer styles */
+footer {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
